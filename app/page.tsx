@@ -2,8 +2,8 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <main className="">
-      <div className="">
+    <main className="p-6">
+      <div className="flex bg-accent rounded-4xl p-4">
         <div className="">
           <p>
             Hey ! I&apos;m <strong>Jules Goy</strong> alias{" "}

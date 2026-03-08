@@ -1,5 +1,9 @@
 import "@/app/ui/global.css";
 import type { Metadata } from "next";
+import { Geist } from "next/font/google";
+import { cn } from "@/app/lib/utils";
+
+const geist = Geist({subsets:['latin'],variable:'--font-sans'});
 
 export const metadata: Metadata = {
   title: "Jules Goy",
@@ -12,8 +16,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body>{children}</body>
+    <html lang="en" className={cn("dark", "font-sans", geist.variable)}>
+      <body className="bg-background">{children}</body>
     </html>
   );
 }
