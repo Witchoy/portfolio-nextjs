@@ -1,7 +1,8 @@
-import "@/app/ui/global.css";
+import "@/app/global.css";
 import type { Metadata } from "next";
 import { Geist } from "next/font/google";
-import { cn } from "@/app/lib/utils";
+import { cn } from "@/lib/utils";
+import { TooltipProvider } from "@/app/components/ui/tooltip";
 
 const geist = Geist({ subsets: ["latin"], variable: "--font-sans" });
 
@@ -17,7 +18,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={cn("dark", "font-sans", geist.variable)}>
-      <body className="bg-background">{children}</body>
+      <body className="bg-background">
+        <TooltipProvider>{children}</TooltipProvider>
+      </body>
     </html>
   );
 }

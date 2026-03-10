@@ -10,6 +10,7 @@
     "lint-fix": "prettier --write ."
   },
   "dependencies": {
+    "@phosphor-icons/react": "^2.1.10",
     "@tailwindcss/forms": "^0.5.11",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
