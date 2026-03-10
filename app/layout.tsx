@@ -2,13 +2,13 @@ import "@/app/global.css";
 import type { Metadata } from "next";
 import { Geist } from "next/font/google";
 import { cn } from "@/lib/utils";
-import { TooltipProvider } from "@/app/components/ui/tooltip";
+import { TooltipProvider } from "@/components/ui/tooltip";
 
 const geist = Geist({ subsets: ["latin"], variable: "--font-sans" });
 
 export const metadata: Metadata = {
   title: "Jules Goy",
-  description: "Junior Software Developper",
+  description: "Junior Software Developer",
 };
 
 export default function RootLayout({
