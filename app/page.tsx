@@ -1,11 +1,12 @@
 import Hero from "@/components/hero";
-import Stack from "@/components/stack";
 
 export default function Home() {
   return (
-    <main className="p-12 hero-bg">
-      <Hero />
-      <Stack />
+    <main className="hero-bg">
+      <div className="px-12 lg:px-32 2xl:px-128s">
+        <Hero />
+      </div>
+    
     </main>
   );
 }

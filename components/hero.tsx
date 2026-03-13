@@ -12,6 +12,7 @@ import {
   TooltipContent,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
+import { motion } from "motion/react";
 
 export default function Hero() {
   return (
@@ -25,9 +26,23 @@ export default function Hero() {
               className="wave text-cyan-800 inline align-middle"
               weight="duotone"
             />{" "}
-            I&apos;m <strong className="text-cyan-800">Jules Goy</strong> alias{" "}
-            <strong className="text-cyan-800">Witchoy,</strong> a Junior
-            Software Developer.
+            I&apos;m{" "}
+            <motion.strong
+              className="text-cyan-800"
+              whileHover={{ scale: 1.1 }}
+              style={{ display: "inline-block" }}
+            >
+              Jules Goy
+            </motion.strong>{" "}
+            alias{" "}
+            <motion.strong
+              className="text-cyan-800"
+              whileHover={{ scale: 1.1 }}
+              style={{ display: "inline-block" }}
+            >
+              Witchoy
+            </motion.strong>{" "}
+            a Junior Software Developer.
           </p>
         </div>
         <Image

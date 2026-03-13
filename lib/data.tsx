@@ -1,13 +1,19 @@
 import { FaVuejs } from "react-icons/fa";
-import { TbBrandDjango, TbBrandNextjs, TbBrandTailwind, TbBrandTypescript } from "react-icons/tb";
+import {
+  TbBrandDjango,
+  TbBrandNextjs,
+  TbBrandTailwind,
+  TbBrandTypescript,
+  TbBrandUnity,
+} from "react-icons/tb";
 
 const techStack = [
   {
-    name: "Next.js",
+    name: "Nextjs",
     icon: TbBrandNextjs,
   },
   {
-    name: "Vue.js",
+    name: "Vuejs",
     icon: FaVuejs,
   },
   {
@@ -15,12 +21,16 @@ const techStack = [
     icon: TbBrandTypescript,
   },
   {
-    name: "Tailwind CSS",
+    name: "Tailwind",
     icon: TbBrandTailwind,
   },
   {
     name: "Django",
     icon: TbBrandDjango,
+  },
+  {
+    name: "Unity",
+    icon: TbBrandUnity,
   },
 ];
 

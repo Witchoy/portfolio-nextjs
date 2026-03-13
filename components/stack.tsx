@@ -1,19 +1,21 @@
 import tech from "@/lib/data";
-import { Badge } from "@/components/ui/badge";
+import { Item, ItemContent, ItemMedia, ItemTitle } from "@/components/ui/item";
 
 export default function Stack() {
   return (
     <section className="py-8 flex flex-col md:flex-row md:justify-between items-start gap-8">
-      <div className="flex flex-wrap gap-3">
+      <div className="flex flex-row flex-wrap gap-3">
         {tech.stack.map((item) => (
-          <Badge
-            key={item.name}
-            variant="outline"
-            className="flex items-center gap-3"
-          >
-            <item.icon className="text-xl" />
-            <span className="text-xl text-slate-700">{item.name}</span>
-          </Badge>
+          <Item key={item.name} className="w-fit">
+            <ItemMedia>
+              <item.icon size={24} className="text-slate-700" />
+            </ItemMedia>
+            <ItemContent>
+              <ItemTitle className="text-2xl text-slate-700">
+                {item.name}
+              </ItemTitle>
+            </ItemContent>
+          </Item>
         ))}
       </div>
 
