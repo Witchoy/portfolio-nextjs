@@ -3,6 +3,8 @@
 import { DotsBackground } from "@/components/dots-bg";
 import Footer from "@/components/footer";
 import MenuBar from "@/components/menu-bar";
+import Timeline from "@/components/timeline/timeline";
+import { timelineData } from "@/lib/data";
 import Image from "next/image";
 
 export default function AboutMe() {
@@ -40,7 +42,12 @@ export default function AboutMe() {
           </div>
         </div>
       </div>
-      <div className="px-6 py-12">{/* Timeline will go here */}</div>
+      <div className="px-6 py-12">
+        <Timeline
+          title="My Journey"
+          items={timelineData}
+        />
+      </div>
       <Footer />
     </main>
   );

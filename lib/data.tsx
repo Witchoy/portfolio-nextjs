@@ -80,4 +80,36 @@ export const menuBar = [
   },
 ];
 
+export const timelineData = [
+  {
+    date: "2025-2026",
+    title: "Apprenticeship - LDE",
+    content: (
+      <p>
+        Junior web developer apprentice working on production features with
+        Vue.js, Django, Git, ClickUp, and PostgreSQL.
+      </p>
+    ),
+  },
+  {
+    date: "Apr-Jul 2025",
+    title: "Internship - Pouey International",
+    content: (
+      <p>
+        Java intership working on the company CRM with Java servlets and XML. 
+      </p>
+    )
+  },
+  {
+    date: "2023-2026",
+    title: "BUT Informatique - Iut Robert Schuman, Strasbourg",
+    content: (
+      <p>
+        University program focused on learning development (C, C#, C++, Java, React, 
+        React-Native, Android Studio), testing, and collaborative project work.
+      </p>
+    ),
+  },
+];
+
 export default tech;

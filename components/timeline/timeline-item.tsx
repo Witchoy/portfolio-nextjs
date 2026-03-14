@@ -1,0 +1,50 @@
+"use client";
+
+import { ReactNode } from "react";
+import { motion } from "framer-motion";
+
+export interface TimelineItemProps {
+  title: string;
+  content: ReactNode;
+  date: string;
+  isLast?: boolean;
+}
+
+export default function TimelineItem({
+  title,
+  content,
+  date,
+  isLast = false,
+}: TimelineItemProps) {
+  return (
+    <motion.li
+      className="relative flex gap-5 group list-none"
+      whileInView={{ opacity: 1, x: 0 }}
+      initial={{ opacity: 0, x: -20 }}
+      viewport={{ once: true, margin: "-60px", amount: 0 }}
+      transition={{
+        duration: 0.45,
+        ease: [0.22, 1, 0.36, 1],
+      }}
+    >
+      <div className="relative flex flex-col items-center shrink-0">
+        {!isLast && (
+          <div className="flex-1 w-px mt-2 bg-gradient-to-b from-slate-200 via-slate-100 to-transparent" />
+        )}
+      </div>
+
+      <div className="pb-10 flex-1 min-w-0">
+        <p className="inline-flex items-center mb-2 font-semibold text-sky-500 border border-sky-100 rounded-full px-3 py-0.5">
+          {date}
+        </p>
+
+        <motion.div className="relative rounded-2xl overflow-hidden border border-slate-100 bg-white px-5 py-4">
+          <h3 className="text-sm font-semibold text-slate-800 mb-1">{title}</h3>
+          <div className="text-sm text-slate-500 leading-relaxed">
+            {content}
+          </div>
+        </motion.div>
+      </div>
+    </motion.li>
+  );
+}
