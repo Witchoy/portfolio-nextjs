@@ -1,6 +1,9 @@
 import { FaVuejs } from "react-icons/fa";
 import {
   TbBrandDjango,
+  TbBrandGithub,
+  TbBrandLetterboxd,
+  TbBrandLinkedin,
   TbBrandNextjs,
   TbBrandTailwind,
   TbBrandTypescript,
@@ -45,5 +48,23 @@ const tech = {
   stack: techStack,
   description: techStackDescription,
 };
+
+export const socialLinks = [
+  {
+    name: "Linkedin",
+    icon: TbBrandLinkedin,
+    url: "https://www.linkedin.com/in/jules-goy",
+  },
+  {
+    name: "Github",
+    icon: TbBrandGithub,
+    url: "https://github.com/Witchoy",
+  },
+  {
+    name: "Letterboxd",
+    icon: TbBrandLetterboxd,
+    url: "https://letterboxd.com/Jules_Goy/",
+  },
+];
 
 export default tech;
