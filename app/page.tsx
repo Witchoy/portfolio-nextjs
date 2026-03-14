@@ -13,7 +13,7 @@ import MenuBar from "@/components/menu-bar";
 import { Button } from "@/components/ui/button";
 import { DotsBackground } from "@/components/dots-bg";
 
-const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL;
+const BASE_URL = process.env.BASE_URL;
 
 export default function Home() {
   return (

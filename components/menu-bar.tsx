@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { menuBar } from "@/lib/data";
 import { usePathname } from "next/navigation";
 
-const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL;
+const BASE_URL = process.env.BASE_URL;
 
 export default function MenuBar() {
   const pathname = usePathname();

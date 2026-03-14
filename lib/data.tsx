@@ -10,7 +10,7 @@ import {
   TbBrandUnity,
 } from "react-icons/tb";
 
-const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL;
+const BASE_URL = process.env.BASE_URL;
 
 const techStack = [
   {
