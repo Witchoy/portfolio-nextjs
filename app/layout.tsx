@@ -1,10 +1,14 @@
 import "@/app/global.css";
 import type { Metadata } from "next";
-import { Geist } from "next/font/google";
+import { Raleway } from "next/font/google";
 import { cn } from "@/lib/utils";
 import { TooltipProvider } from "@/components/ui/tooltip";
 
-const geist = Geist({ subsets: ["latin"], variable: "--font-sans" });
+const font = Raleway({
+  subsets: ["latin"],
+  variable: "--font-sans",
+  weight: ["100", "200", "300", "400", "500", "600", "700"],
+});
 
 export const metadata: Metadata = {
   title: "Jules Goy",
@@ -17,7 +21,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={cn("dark", "font-sans", geist.variable)}>
+    <html lang="en" className={cn("light", "font-sans", font.variable)}>
       <body className="bg-background">
         <TooltipProvider>{children}</TooltipProvider>
       </body>

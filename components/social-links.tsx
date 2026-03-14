@@ -5,14 +5,10 @@ export default function SocialLinks() {
   return (
     <div className="flex">
       {socialLinks.map((item) => (
-        <Button key={item.name} variant="ghost" asChild>
-          <a
-            href={item.url}
-            target="_blank"
-            rel="noreferrer"
-            className="text-lg text-slate-700"
-          >
-            {item.name}
+        <Button key={item.name} variant="link" asChild>
+          <a href={item.url} target="_blank" rel="noopener noreferrer">
+            <item.icon className="text-slate-900 text-xl" />
+            <span className="text-xl text-slate-900">{item.name}</span>
           </a>
         </Button>
       ))}

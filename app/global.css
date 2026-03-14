@@ -7,11 +7,6 @@
 :root {
   --background: oklch(1 0 0);
   --foreground: oklch(0.145 0 0);
-  --hero-gradient: linear-gradient(
-    49deg,
-    rgba(252, 198, 122, 1) 23%,
-    rgba(49, 65, 88, 1) 100%
-  );
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.145 0 0);
   --popover: oklch(1 0 0);
@@ -132,8 +127,13 @@
   }
 }
 
-.hero-bg {
-  background: var(--hero-gradient);
+.noise {
+  background: linear-gradient(to right, #bfae99), url(/public/noise.svg);
+  filter: contrast(170%) brightness(1000%);
+}
+
+.background-vanilla-dust {
+  background: #bfae99;
 }
 
 .wave {

@@ -67,4 +67,15 @@ export const socialLinks = [
   },
 ];
 
+export const menuBar = [
+  {
+    name: "About Me",
+    url: "https://julesgoy.dev/about_me",
+  },
+  {
+    name: "Projects",
+    url: "https://julesgoy.dev/projects",
+  },
+];
+
 export default tech;
