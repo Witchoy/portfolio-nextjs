@@ -10,6 +10,8 @@ import {
   TbBrandUnity,
 } from "react-icons/tb";
 
+const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL;
+
 const techStack = [
   {
     name: "Nextjs",
@@ -70,11 +72,11 @@ export const socialLinks = [
 export const menuBar = [
   {
     name: "About Me",
-    url: "https://julesgoy.dev/about_me",
+    url: BASE_URL + "about",
   },
   {
     name: "Projects",
-    url: "https://julesgoy.dev/projects",
+    url: BASE_URL + "projects",
   },
 ];
 

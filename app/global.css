@@ -136,6 +136,10 @@
   background: #bfae99;
 }
 
+.background-vanilla-dust-dark {
+  background: #8e8171;
+}
+
 .wave {
   display: inline-block;
   transform-origin: 70% 70%;

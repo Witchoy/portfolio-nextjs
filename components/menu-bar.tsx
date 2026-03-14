@@ -1,29 +1,43 @@
+"use client";
+
 import { Button } from "@/components/ui/button";
-import { Separator } from "@/components/ui/separator";
 import { menuBar } from "@/lib/data";
+import { usePathname } from "next/navigation";
 
 export default function MenuBar() {
+  const pathname = usePathname();
+
+  const isActive = (url: string) => {
+    const path = url.split("/").pop() || "";
+    return pathname === "/" + path || (path === "" && pathname === "/");
+  };
+
   return (
-    <div>
-      <div className="flex justify-between text-stone-700 mx-3 mt-3 mb-0">
-        <div>
-          <Button variant={"link"}>
-            <a href="https://julesgoy.dev/" className="text-2xl">
-              julesgoy.dev
+    <div className="flex justify-between bg-taupe-900 rounded-lg p-3 m-3">
+      <div>
+        <Button
+          variant={pathname === "/" ? "sky" : "ghost_sky"}
+          className="p-3"
+        >
+          <a href="http://localhost:3000/" className="text-2xl text-white">
+            julesgoy.dev
+          </a>
+        </Button>
+      </div>
+      <div>
+        {menuBar.map((item) => (
+          <Button
+            key={item.name}
+            variant={isActive(item.url) ? "sky" : "ghost_sky"}
+            className="p-3"
+            asChild
+          >
+            <a href={item.url}>
+              <span className="text-xl text-white">{item.name}</span>
             </a>
           </Button>
-        </div>
-        <div>
-          {menuBar.map((item) => (
-            <Button key={item.name} variant="link" asChild>
-              <a href={item.url} className="text-2xl">
-                <span className="text-xl">{item.name}</span>
-              </a>
-            </Button>
-          ))}
-        </div>
+        ))}
       </div>
-      <Separator className="bg-slate-900" />
     </div>
   );
 }
