@@ -13,6 +13,8 @@ import MenuBar from "@/components/menu-bar";
 import { Button } from "@/components/ui/button";
 import { DotsBackground } from "@/components/dots-bg";
 
+const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL;
+
 export default function Home() {
   return (
     <main className="min-h-screen flex flex-col">
@@ -42,7 +44,7 @@ export default function Home() {
             creating clean code.
           </p>
           <Button variant="taupe_sky" className="my-6">
-            <a href="http://localhost:3000/projects">
+            <a href={BASE_URL + "projects"}>
               <span className="inline-flex items-center gap-2">
                 View my projects
                 <LuArrowBigRightDash />

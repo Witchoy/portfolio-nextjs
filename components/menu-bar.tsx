@@ -4,6 +4,8 @@ import { Button } from "@/components/ui/button";
 import { menuBar } from "@/lib/data";
 import { usePathname } from "next/navigation";
 
+const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL;
+
 export default function MenuBar() {
   const pathname = usePathname();
 
@@ -19,7 +21,7 @@ export default function MenuBar() {
           variant={pathname === "/" ? "sky" : "ghost_sky"}
           className="p-3"
         >
-          <a href="http://localhost:3000/" className="text-2xl text-white">
+          <a href={BASE_URL} className="text-2xl text-white">
             julesgoy.dev
           </a>
         </Button>
