@@ -1,0 +1,201 @@
+{
+  "Layout": {
+    "skipToMainContent": "Skip to main content"
+  },
+  "Metadata": {
+    "layout": {
+      "titleTemplate": "%s | Jules Goy",
+      "defaultTitle": "Jules Goy",
+      "description": "Portfolio of Jules Goy, junior software developer focused on web and gameplay programming.",
+      "openGraphSiteName": "Jules Goy",
+      "openGraphTitle": "Jules' Portfolio"
+    },
+    "home": {
+      "title": "Home",
+      "description": "Portfolio of Jules Goy, junior software developer focused on web and gameplay programming."
+    },
+    "projects": {
+      "title": "Projects - Jules Goy",
+      "description": "A selection of my web and game development projects."
+    },
+    "about": {
+      "title": "About",
+      "description": "Learn more about me and my journey."
+    }
+  },
+  "MenuBar": {
+    "ariaPrimary": "Primary",
+    "homeAria": "Go to homepage",
+    "homeLabel": "julesgoy.dev",
+    "switchLanguageButton": "Switch to {locale}",
+    "switchLanguageAria": "Switch language to {locale}",
+    "localeShort": {
+      "en": "EN",
+      "fr": "FR"
+    },
+    "items": {
+      "aboutMe": "About Me",
+      "projects": "Projects"
+    }
+  },
+  "HomePage": {
+    "greeting": "Hey",
+    "intro": "I'm",
+    "name": "Jules Goy",
+    "taglinePart1": "Turning croissants",
+    "taglinePart2": "and coffee",
+    "taglinePart3": "into code",
+    "description": "Junior French developer passionate about gameplay programming and creating clean code.",
+    "viewProjects": "View my projects",
+    "projectsHref": "/projects"
+  },
+  "SocialLinks": {
+    "ariaLabel": "Social links",
+    "openInNewTab": "{name} (opens in a new tab)",
+    "items": {
+      "linkedin": "Linkedin",
+      "github": "Github",
+      "letterboxd": "Letterboxd"
+    }
+  },
+  "Footer": {
+    "author": "Jules Goy",
+    "madeWith": "Made with coffee and croissants",
+    "githubAria": "GitHub profile (opens in a new tab)"
+  },
+  "AboutPage": {
+    "heading": "Who am I",
+    "paragraph1": "I am a third-year BUT Informatique student specializing in application design, development, and validation, currently working as a web developer apprentice at LDE. My time there, building production features with Vue.js, Django, and PostgreSQL, has taught me what it means to write code that actually ships, and confirmed that I genuinely love the craft of development.",
+    "paragraph2Part1": "But my real goal lies in game development. I've always been both a player and a coder, and at some point the two naturally merged. What draws me to game dev is the challenge of crafting tight, precise gameplay, the kind where every input feels intentional, where mechanics carry the story, and where a well-designed puzzle can say more than a cutscene. I work mostly with Unity and C# on personal prototypes, exploring these ideas hands-on.",
+    "paragraph2Part2": "After my BUT, I'm aiming to join a small indie studio as a gameplay developer, or pursue further studies in game development to get there. The web is a solid foundation and a genuine skill I'm building, but game dev is where I want to take it. Outside of code, I draw inspiration from cinema, music, and comics, not only as hobbies separate from my work, but as lenses through which I think about what makes an experience feel cohesive and meaningful.",
+    "photoAlt": "Picture of me",
+    "timelineTitle": "My Journey"
+  },
+  "Stack": {
+    "title": "My Stack",
+    "categories": {
+      "web": "Web",
+      "gameDev": "Game Dev",
+      "tools": "Tools"
+    },
+    "items": {
+      "nextjs": "Next.js",
+      "vuejs": "Vue.js",
+      "reactRn": "React / RN",
+      "typescript": "TypeScript",
+      "tailwind": "Tailwind",
+      "django": "Django",
+      "postgresql": "PostgreSQL",
+      "unityCsharp": "Unity / C#",
+      "godot": "Godot",
+      "git": "Git",
+      "gitlabCiCd": "GitLab CI/CD",
+      "androidStudio": "Android Studio"
+    },
+    "description": "My stack reflects two complementary paths. On the web side, I work daily with Vue.js, Django and PostgreSQL at my apprenticeship, and use Next.js and TypeScript for personal projects. On the game dev side, Unity (C#) is my main tool for prototyping gameplay mechanics, with Godot as an occasional alternative for smaller experiments. Java and Android Studio round out my academic background from the BUT."
+  },
+  "Timeline": {
+    "items": {
+      "apprenticeship": {
+        "date": "2025 - 2026",
+        "title": "Apprenticeship - LDE",
+        "content": "Junior web developer apprentice building and shipping production features with Vue.js, Django, and PostgreSQL. Working within an agile team taught me what it really means to write code that others depend on, readable, tested, and maintainable."
+      },
+      "internship": {
+        "date": "Apr - Jul 2025",
+        "title": "Internship - Pouey International",
+        "content": "Worked on the company's internal CRM using Java Servlets and XML. A deliberate step outside my comfort zone that strengthened my ability to navigate unfamiliar codebases and legacy stacks."
+      },
+      "butInfo": {
+        "date": "2023 - 2026",
+        "title": "BUT Informatique - IUT Robert Schuman, Strasbourg",
+        "content": "Three-year university programme covering software development (C, C++, C#, Java, React, React Native, Android Studio), testing, and collaborative project work. It's here that I discovered Unity and C#, which sparked my interest in game development and shaped the direction I want to take professionally."
+      }
+    }
+  },
+  "ProjectsPage": {
+    "heading": "Projects",
+    "card": {
+      "featured": "Featured",
+      "noPreviewYet": "No preview yet"
+    }
+  },
+  "ProjectsData": {
+    "context": {
+      "iut": "IUT",
+      "personal": "Personal"
+    },
+    "items": {
+      "strasTaRoute": {
+        "title": "StrasTaRoute - Níðhöggr",
+        "description": "A full-stack mobility app for the Strasbourg area, built as part of the Níðhöggr university project. The platform includes a React Native mobile app and a web interface, both powered by a shared backend. Features real-time data, CI/CD pipelines via GitLab, and a full test plan.",
+        "tags": {
+          "nextjs": "Nextjs",
+          "reactNative": "React Native",
+          "angular": "Angular",
+          "typescript": "TypeScript",
+          "gitlabCiCd": "GitLab CI/CD"
+        },
+        "links": {
+          "mobileRepo": "Mobile repo",
+          "webRepo": "Web repo",
+          "apiRepo": "API repo"
+        }
+      },
+      "torrington": {
+        "title": "Torrington",
+        "description": "A serious game simulating university program selection, developed in C# with the Godot engine. Built with MVC architecture and the Observer pattern, it integrates a SQLite database and runs on Windows, Linux, and macOS. A team project that pushed me to apply software design principles in a game context for the first time.",
+        "tags": {
+          "godot": "Godot",
+          "csharp": "C#",
+          "sqlite": "SQLite",
+          "mvc": "MVC",
+          "uml": "UML"
+        },
+        "links": {
+          "github": "GitHub"
+        }
+      },
+      "wiMusicApi": {
+        "title": "WiMusic API",
+        "description": "A self-hosted music streaming backend built with Node.js, Express, and TypeScript. Supports MP3 uploads, audio streaming with range requests, and full CRUD for tracks, artists, albums, genres, and playlists. Uses Prisma ORM with SQLite and Superstruct for runtime validation.",
+        "tags": {
+          "nodejs": "Node.js",
+          "typescript": "TypeScript",
+          "express": "Express",
+          "prisma": "Prisma",
+          "sqlite": "SQLite"
+        },
+        "links": {
+          "github": "GitHub"
+        }
+      },
+      "tankGame": {
+        "title": "TankGame",
+        "description": "A personal 3D tank game built with Unity and C# to explore 3D game development. An early hands-on experiment with Unity's physics, camera systems, and VFX, the project that got me seriously interested in gameplay programming.",
+        "tags": {
+          "unity": "Unity",
+          "csharp": "C#",
+          "threeD": "3D",
+          "shaderLab": "ShaderLab"
+        },
+        "links": {
+          "github": "GitHub"
+        }
+      },
+      "portfolio": {
+        "title": "Portfolio",
+        "description": "This very site, built with Next.js, TypeScript, Tailwind CSS, and Framer Motion. Designed and developed from scratch as both a personal branding exercise and a technical playground for trying out new UI patterns.",
+        "tags": {
+          "nextjs": "Next.js",
+          "typescript": "TypeScript",
+          "tailwind": "Tailwind",
+          "framerMotion": "Framer Motion"
+        },
+        "links": {
+          "github": "GitHub"
+        }
+      }
+    }
+  }
+}

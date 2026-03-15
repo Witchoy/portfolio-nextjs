@@ -15,43 +15,72 @@ import {
   TbDatabase,
 } from "react-icons/tb";
 import { SiGodotengine } from "react-icons/si";
-import { Project } from "@/lib/types";
 
 const techStack = [
-  { name: "Next.js", icon: TbBrandNextjs, category: "Web" },
-  { name: "Vue.js", icon: FaVuejs, category: "Web" },
-  { name: "React / RN", icon: TbBrandReact, category: "Web" },
-  { name: "TypeScript", icon: TbBrandTypescript, category: "Web" },
-  { name: "Tailwind", icon: TbBrandTailwind, category: "Web" },
-  { name: "Django", icon: TbBrandDjango, category: "Web" },
-  { name: "PostgreSQL", icon: TbDatabase, category: "Web" },
-  { name: "Unity / C#", icon: TbBrandUnity, category: "Game Dev" },
-  { name: "Godot", icon: SiGodotengine, category: "Game Dev" },
-  { name: "Git", icon: TbBrandGit, category: "Tools" },
-  { name: "GitLab CI/CD", icon: TbBrandGitlab, category: "Tools" },
-  { name: "Android Studio", icon: TbBrandAndroid, category: "Tools" },
+  { nameKey: "Stack.items.nextjs", icon: TbBrandNextjs, category: "web" },
+  { nameKey: "Stack.items.vuejs", icon: FaVuejs, category: "web" },
+  {
+    nameKey: "Stack.items.reactRn",
+    icon: TbBrandReact,
+    category: "web",
+  },
+  {
+    nameKey: "Stack.items.typescript",
+    icon: TbBrandTypescript,
+    category: "web",
+  },
+  {
+    nameKey: "Stack.items.tailwind",
+    icon: TbBrandTailwind,
+    category: "web",
+  },
+  { nameKey: "Stack.items.django", icon: TbBrandDjango, category: "web" },
+  {
+    nameKey: "Stack.items.postgresql",
+    icon: TbDatabase,
+    category: "web",
+  },
+  {
+    nameKey: "Stack.items.unityCsharp",
+    icon: TbBrandUnity,
+    category: "gameDev",
+  },
+  {
+    nameKey: "Stack.items.godot",
+    icon: SiGodotengine,
+    category: "gameDev",
+  },
+  { nameKey: "Stack.items.git", icon: TbBrandGit, category: "tools" },
+  {
+    nameKey: "Stack.items.gitlabCiCd",
+    icon: TbBrandGitlab,
+    category: "tools",
+  },
+  {
+    nameKey: "Stack.items.androidStudio",
+    icon: TbBrandAndroid,
+    category: "tools",
+  },
 ];
-
-const techStackDescription = `My stack reflects two complementary paths. On the web side, I work daily with Vue.js, Django and PostgreSQL at my apprenticeship, and use Next.js and TypeScript for personal projects. On the game dev side, Unity (C#) is my main tool for prototyping gameplay mechanics, with Godot as an occasional alternative for smaller experiments. Java and Android Studio round out my academic background from the BUT.`;
 
 const tech = {
   stack: techStack,
-  description: techStackDescription,
+  descriptionKey: "Stack.description",
 };
 
 export const socialLinks = [
   {
-    name: "Linkedin",
+    nameKey: "SocialLinks.items.linkedin",
     icon: TbBrandLinkedin,
     url: "https://www.linkedin.com/in/jules-goy",
   },
   {
-    name: "Github",
+    nameKey: "SocialLinks.items.github",
     icon: TbBrandGithub,
     url: "https://github.com/Witchoy",
   },
   {
-    name: "Letterboxd",
+    nameKey: "SocialLinks.items.letterboxd",
     icon: TbBrandLetterboxd,
     url: "https://letterboxd.com/Jules_Goy/",
   },
@@ -59,150 +88,142 @@ export const socialLinks = [
 
 export const menuBar = [
   {
-    name: "About Me",
+    nameKey: "MenuBar.items.aboutMe",
     url: "/about",
   },
   {
-    name: "Projects",
+    nameKey: "MenuBar.items.projects",
     url: "/projects",
   },
 ];
 
 export const timelineData = [
   {
-    date: "2025 - 2026",
-    title: "Apprenticeship - LDE",
-    content: (
-      <p>
-        Junior web developer apprentice building and shipping production
-        features with Vue.js, Django, and PostgreSQL. Working within an agile
-        team taught me what it really means to write code that others depend on,
-        readable, tested, and maintainable.
-      </p>
-    ),
+    dateKey: "Timeline.items.apprenticeship.date",
+    titleKey: "Timeline.items.apprenticeship.title",
+    contentKey: "Timeline.items.apprenticeship.content",
   },
   {
-    date: "Apr - Jul 2025",
-    title: "Internship - Pouey International",
-    content: (
-      <p>
-        Worked on the company's internal CRM using Java Servlets and XML. A
-        deliberate step outside my comfort zone that strengthened my ability to
-        navigate unfamiliar codebases and legacy stacks.
-      </p>
-    ),
+    dateKey: "Timeline.items.internship.date",
+    titleKey: "Timeline.items.internship.title",
+    contentKey: "Timeline.items.internship.content",
   },
   {
-    date: "2023 - 2026",
-    title: "BUT Informatique - IUT Robert Schuman, Strasbourg",
-    content: (
-      <p>
-        Three-year university programme covering software development (C, C++,
-        C#, Java, React, React Native, Android Studio), testing, and
-        collaborative project work. It's here that I discovered Unity and C#,
-        which sparked my interest in game development and shaped the direction I
-        want to take professionally.
-      </p>
-    ),
+    dateKey: "Timeline.items.butInfo.date",
+    titleKey: "Timeline.items.butInfo.title",
+    contentKey: "Timeline.items.butInfo.content",
   },
 ];
 
-export const projectsData: Project[] = [
+export const projectsData = [
   {
-    title: "StrasTaRoute - Níðhöggr",
-    description:
-      "A full-stack mobility app for the Strasbourg area, built as part of the Níðhöggr university project. The platform includes a React Native mobile app and a web interface, both powered by a shared backend. Features real-time data, CI/CD pipelines via GitLab, and a full test plan.",
+    titleKey: "ProjectsData.items.strasTaRoute.title",
+    descriptionKey: "ProjectsData.items.strasTaRoute.description",
     tags: [
-      { label: "Nextjs" },
-      { label: "React Native" },
-      { label: "Angular" },
-      { label: "TypeScript" },
-      { label: "GitLab CI/CD" },
+      { labelKey: "ProjectsData.items.strasTaRoute.tags.nextjs" },
+      { labelKey: "ProjectsData.items.strasTaRoute.tags.reactNative" },
+      { labelKey: "ProjectsData.items.strasTaRoute.tags.angular" },
+      { labelKey: "ProjectsData.items.strasTaRoute.tags.typescript" },
+      { labelKey: "ProjectsData.items.strasTaRoute.tags.gitlabCiCd" },
     ],
     links: [
       {
-        label: "Mobile repo",
+        labelKey: "ProjectsData.items.strasTaRoute.links.mobileRepo",
         url: "https://github.com/Witchoy/StrasTaRoute_Mobile",
       },
       {
-        label: "Web repo",
+        labelKey: "ProjectsData.items.strasTaRoute.links.webRepo",
         url: "https://github.com/Witchoy/StrasTaRoute_Web",
       },
       {
-        label: "API repo",
+        labelKey: "ProjectsData.items.strasTaRoute.links.apiRepo",
         url: "https://github.com/Witchoy/STR-API",
       },
     ],
     image:
       "https://github.com/Witchoy/StrasTaRoute_Web/blob/prod/assets/Auth_Login.png?raw=true",
     featured: true,
-    context: "IUT",
+    contextKey: "ProjectsData.context.iut",
   },
   {
-    title: "Torrington",
-    description:
-      "A serious game simulating university program selection, developed in C# with the Godot engine. Built with MVC architecture and the Observer pattern, it integrates a SQLite database and runs on Windows, Linux, and macOS. A team project that pushed me to apply software design principles in a game context for the first time.",
+    titleKey: "ProjectsData.items.torrington.title",
+    descriptionKey: "ProjectsData.items.torrington.description",
     tags: [
-      { label: "Godot" },
-      { label: "C#" },
-      { label: "SQLite" },
-      { label: "MVC" },
-      { label: "UML" },
+      { labelKey: "ProjectsData.items.torrington.tags.godot" },
+      { labelKey: "ProjectsData.items.torrington.tags.csharp" },
+      { labelKey: "ProjectsData.items.torrington.tags.sqlite" },
+      { labelKey: "ProjectsData.items.torrington.tags.mvc" },
+      { labelKey: "ProjectsData.items.torrington.tags.uml" },
     ],
-    links: [{ label: "GitHub", url: "https://github.com/Witchoy/Torrington" }],
+    links: [
+      {
+        labelKey: "ProjectsData.items.torrington.links.github",
+        url: "https://github.com/Witchoy/Torrington",
+      },
+    ],
     image:
       "https://raw.githubusercontent.com/Witchoy/Torrington/main/docs/images/gameScene.png",
     featured: false,
-    context: "IUT",
+    contextKey: "ProjectsData.context.iut",
   },
   {
-    title: "WiMusic API",
-    description:
-      "A self-hosted music streaming backend built with Node.js, Express, and TypeScript. Supports MP3 uploads, audio streaming with range requests, and full CRUD for tracks, artists, albums, genres, and playlists. Uses Prisma ORM with SQLite and Superstruct for runtime validation.",
+    titleKey: "ProjectsData.items.wiMusicApi.title",
+    descriptionKey: "ProjectsData.items.wiMusicApi.description",
     tags: [
-      { label: "Node.js" },
-      { label: "TypeScript" },
-      { label: "Express" },
-      { label: "Prisma" },
-      { label: "SQLite" },
-    ],
-    links: [{ label: "GitHub", url: "https://github.com/Witchoy/WiMusic_Api" }],
-    image: undefined,
-    featured: false,
-    context: "Personal",
-  },
-  {
-    title: "TankGame",
-    description:
-      "A personal 3D tank game built with Unity and C# to explore 3D game development. An early hands-on experiment with Unity's physics, camera systems, and VFX, the project that got me seriously interested in gameplay programming.",
-    tags: [
-      { label: "Unity" },
-      { label: "C#" },
-      { label: "3D" },
-      { label: "ShaderLab" },
-    ],
-    links: [{ label: "GitHub", url: "https://github.com/Witchoy/TankGame" }],
-    image: undefined,
-    featured: false,
-    context: "Personal",
-  },
-  {
-    title: "Portfolio",
-    description:
-      "This very site, built with Next.js, TypeScript, Tailwind CSS, and Framer Motion. Designed and developed from scratch as both a personal branding exercise and a technical playground for trying out new UI patterns.",
-    tags: [
-      { label: "Next.js" },
-      { label: "TypeScript" },
-      { label: "Tailwind" },
-      { label: "Framer Motion" },
+      { labelKey: "ProjectsData.items.wiMusicApi.tags.nodejs" },
+      { labelKey: "ProjectsData.items.wiMusicApi.tags.typescript" },
+      { labelKey: "ProjectsData.items.wiMusicApi.tags.express" },
+      { labelKey: "ProjectsData.items.wiMusicApi.tags.prisma" },
+      { labelKey: "ProjectsData.items.wiMusicApi.tags.sqlite" },
     ],
     links: [
-      { label: "GitHub", url: "https://github.com/Witchoy/portfolio-nextjs" },
+      {
+        labelKey: "ProjectsData.items.wiMusicApi.links.github",
+        url: "https://github.com/Witchoy/WiMusic_Api",
+      },
+    ],
+    image: undefined,
+    featured: false,
+    contextKey: "ProjectsData.context.personal",
+  },
+  {
+    titleKey: "ProjectsData.items.tankGame.title",
+    descriptionKey: "ProjectsData.items.tankGame.description",
+    tags: [
+      { labelKey: "ProjectsData.items.tankGame.tags.unity" },
+      { labelKey: "ProjectsData.items.tankGame.tags.csharp" },
+      { labelKey: "ProjectsData.items.tankGame.tags.threeD" },
+      { labelKey: "ProjectsData.items.tankGame.tags.shaderLab" },
+    ],
+    links: [
+      {
+        labelKey: "ProjectsData.items.tankGame.links.github",
+        url: "https://github.com/Witchoy/TankGame",
+      },
+    ],
+    image: undefined,
+    featured: false,
+    contextKey: "ProjectsData.context.personal",
+  },
+  {
+    titleKey: "ProjectsData.items.portfolio.title",
+    descriptionKey: "ProjectsData.items.portfolio.description",
+    tags: [
+      { labelKey: "ProjectsData.items.portfolio.tags.nextjs" },
+      { labelKey: "ProjectsData.items.portfolio.tags.typescript" },
+      { labelKey: "ProjectsData.items.portfolio.tags.tailwind" },
+      { labelKey: "ProjectsData.items.portfolio.tags.framerMotion" },
+    ],
+    links: [
+      {
+        labelKey: "ProjectsData.items.portfolio.links.github",
+        url: "https://github.com/Witchoy/portfolio-nextjs",
+      },
     ],
     image:
       "https://github.com/Witchoy/portfolio-nextjs/blob/main/public/home.png?raw=true",
     featured: false,
-    context: "Personal",
+    contextKey: "ProjectsData.context.personal",
   },
 ];
 

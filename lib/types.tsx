@@ -15,5 +15,5 @@ export type Project = {
   links: ProjectLink[];
   image?: string;
   featured?: boolean;
-  context: "IUT" | "Personal";
+  context: string;
 };

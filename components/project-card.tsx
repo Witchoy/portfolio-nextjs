@@ -1,11 +1,14 @@
 import { Button } from "@/components/ui/button";
 import { Project } from "@/lib/types";
+import { getTranslations } from "next-intl/server";
 
 type ProjectCardProps = {
   project: Project;
 };
 
-export default function ProjectCard({ project }: ProjectCardProps) {
+export default async function ProjectCard({ project }: ProjectCardProps) {
+  const t = await getTranslations();
+
   if (project.featured) {
     return (
       <div className="col-span-full rounded-2xl border border-stone-200/70 bg-white/70 backdrop-blur-sm overflow-hidden flex flex-col md:flex-row gap-0">
@@ -18,7 +21,9 @@ export default function ProjectCard({ project }: ProjectCardProps) {
               className="w-full h-full object-cover"
             />
           ) : (
-            <span className="text-stone-400 text-sm">No preview yet</span>
+            <span className="text-stone-400 text-sm">
+              {t("ProjectsPage.card.noPreviewYet")}
+            </span>
           )}
         </div>
         {/* Content */}
@@ -26,7 +31,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
           <div className="flex flex-col gap-3">
             <div className="flex items-center gap-2">
               <span className="text-xs font-semibold uppercase tracking-widest text-sky-500 border border-sky-100 rounded-full px-3 py-0.5">
-                Featured · {project.context}
+                {t("ProjectsPage.card.featured")} · {project.context}
               </span>
             </div>
             <h2 className="text-2xl font-bold text-stone-900">
@@ -71,7 +76,9 @@ export default function ProjectCard({ project }: ProjectCardProps) {
             className="w-full h-full object-cover"
           />
         ) : (
-          <span className="text-stone-400 text-sm">No preview yet</span>
+          <span className="text-stone-400 text-sm">
+            {t("ProjectsPage.card.noPreviewYet")}
+          </span>
         )}
       </div>
       {/* Content */}
