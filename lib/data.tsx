@@ -2,6 +2,7 @@ import { FaVuejs } from "react-icons/fa";
 import {
   TbBrandDjango,
   TbBrandGithub,
+  TbBrandGitlab,
   TbBrandLetterboxd,
   TbBrandLinkedin,
   TbBrandNextjs,
@@ -9,6 +10,7 @@ import {
   TbBrandTypescript,
   TbBrandUnity,
 } from "react-icons/tb";
+import { SiGodotengine } from "react-icons/si";
 
 const techStack = [
   {
@@ -35,14 +37,21 @@ const techStack = [
     name: "Unity",
     icon: TbBrandUnity,
   },
+  {
+    name: "C#",
+    icon: null,
+  },
+  {
+    name: "Godot",
+    icon: SiGodotengine,
+  },
+  {
+    name: "Gitlab CI/CD",
+    icon: TbBrandGitlab,
+  },
 ];
 
-const techStackDescription = `I'm currently working with ${techStack
-  .slice(0, -1)
-  .map((item) => item.name)
-  .join(
-    ", "
-  )}, and ${techStack.slice(-1)[0].name}. I also have experience with Node.js and Express for backend development.`;
+const techStackDescription = `At my job I'm currently working with VueJs, Django and PostgreSQL as database. For personal project I'm using either NextJS for web development and Unity C# for video game programming.`;
 
 const tech = {
   stack: techStack,
