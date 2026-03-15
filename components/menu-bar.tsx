@@ -14,32 +14,40 @@ export default function MenuBar() {
   };
 
   return (
-    <div className="flex justify-between bg-taupe-900 rounded-lg p-3 m-3">
-      <div>
-        <Button
-          variant={pathname === "/" ? "sky" : "ghost_sky"}
-          className="p-3"
-          asChild
-        >
-          <Link href="/">
-            <span className="text-white text-xl">julesgoy.dev</span>
-          </Link>
-        </Button>
-      </div>
-      <div>
-        {menuBar.map((item) => (
+    <header className="m-3">
+      <nav
+        aria-label="Primary"
+        className="flex justify-between bg-taupe-900 rounded-lg p-3"
+      >
+        <div>
           <Button
-            key={item.name}
-            variant={isActive(item.url) ? "sky" : "ghost_sky"}
+            variant={pathname === "/" ? "sky" : "ghost_sky"}
             className="p-3"
             asChild
           >
-            <Link href={item.url}>
-              <span className="text-white text-xl">{item.name}</span>
+            <Link href="/" aria-label="Go to homepage">
+              <span className="text-white text-xl">julesgoy.dev</span>
             </Link>
           </Button>
-        ))}
-      </div>
-    </div>
+        </div>
+        <div>
+          {menuBar.map((item) => (
+            <Button
+              key={item.name}
+              variant={isActive(item.url) ? "sky" : "ghost_sky"}
+              className="p-3"
+              asChild
+            >
+              <Link
+                href={item.url}
+                aria-current={isActive(item.url) ? "page" : undefined}
+              >
+                <span className="text-white text-xl">{item.name}</span>
+              </Link>
+            </Button>
+          ))}
+        </div>
+      </nav>
+    </header>
   );
 }

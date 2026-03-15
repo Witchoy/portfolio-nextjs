@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 
 export default function AboutMe() {
   return (
-    <main className="flex flex-col">
+    <main id="main-content" className="flex flex-col">
       <DotsBackground />
       <MenuBar />
       <div className="flex-1 flex justify-center items-center px-6 py-12">

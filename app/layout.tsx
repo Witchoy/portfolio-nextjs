@@ -42,6 +42,12 @@ export default function RootLayout({
   return (
     <html lang="en" className={cn("light", "font-sans", font.variable)}>
       <body className="bg-background">
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:rounded-md focus:bg-white focus:px-4 focus:py-2 focus:text-stone-900 focus:shadow-md"
+        >
+          Skip to main content
+        </a>
         <TooltipProvider>{children}</TooltipProvider>
         <Analytics />
         <SpeedInsights />

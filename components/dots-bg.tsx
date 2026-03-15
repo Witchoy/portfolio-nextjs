@@ -59,8 +59,12 @@ export function DotsBackground() {
     const ctx = canvas.getContext("2d");
     if (!ctx) return;
 
+    const prefersReducedMotion = window.matchMedia(
+      "(prefers-reduced-motion: reduce)"
+    ).matches;
+
     let dots: Dot[] = [];
-    let animationId: number; // 🔧 Fix 1: track animation frame
+    let animationId: number;
     const mouse = { x: null as number | null, y: null as number | null };
 
     const init = () => {
@@ -80,19 +84,24 @@ export function DotsBackground() {
         dot.update(mouse);
         dot.draw(ctx);
       });
-      animationId = requestAnimationFrame(animate); // 🔧 Fix 1: store the id
+      animationId = requestAnimationFrame(animate);
     };
 
     init();
+    if (prefersReducedMotion) {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      dots.forEach((dot) => dot.draw(ctx));
+      return;
+    }
+
     animate();
 
     const handleResize = () => init();
     const handleMouseMove = (e: MouseEvent) => {
-      mouse.x = e.clientX; // 🔧 Fix 2: clientX over e.x (more reliable)
+      mouse.x = e.clientX;
       mouse.y = e.clientY;
     };
     const handleMouseLeave = () => {
-      // 🔧 Fix 3: clear mouse on leave
       mouse.x = null;
       mouse.y = null;
     };
@@ -102,7 +111,7 @@ export function DotsBackground() {
     window.addEventListener("mouseleave", handleMouseLeave);
 
     return () => {
-      cancelAnimationFrame(animationId); // 🔧 Fix 1: cancel on unmount
+      cancelAnimationFrame(animationId);
       window.removeEventListener("resize", handleResize);
       window.removeEventListener("mousemove", handleMouseMove);
       window.removeEventListener("mouseleave", handleMouseLeave);
@@ -113,6 +122,7 @@ export function DotsBackground() {
     <canvas
       ref={canvasRef}
       className="fixed top-0 left-0 w-full h-full pointer-events-none -z-10 bg-transparent"
+      aria-hidden="true"
     />
   );
 }

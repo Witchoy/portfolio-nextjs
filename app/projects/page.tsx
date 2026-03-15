@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 export default function Projects() {
   return (
-    <div className="min-h-screen flex flex-col">
+    <main id="main-content" className="min-h-screen flex flex-col">
       <DotsBackground />
       <MenuBar />
       <div className="flex-1 flex items-center justify-center">
@@ -19,6 +19,6 @@ export default function Projects() {
         </h1>
       </div>
       <Footer />
-    </div>
+    </main>
   );
 }

@@ -103,7 +103,7 @@ export const timelineData = [
     title: "Internship - Pouey International",
     content: (
       <p>
-        Java intership working on the company CRM with Java servlets and XML.
+        Java internship working on the company CRM with Java servlets and XML.
       </p>
     ),
   },

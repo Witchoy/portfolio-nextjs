@@ -1,7 +1,7 @@
 "use client";
 
 import { ReactNode } from "react";
-import { motion } from "motion/react";
+import { motion, useReducedMotion } from "motion/react";
 
 export interface TimelineItemProps {
   title: string;
@@ -16,16 +16,24 @@ export default function TimelineItem({
   date,
   isLast = false,
 }: TimelineItemProps) {
+  const reduceMotion = useReducedMotion();
+
   return (
     <motion.li
       className="relative flex gap-5 group list-none"
-      whileInView={{ opacity: 1, x: 0 }}
-      initial={{ opacity: 0, x: -20 }}
-      viewport={{ once: true, margin: "-60px", amount: 0 }}
-      transition={{
-        duration: 0.45,
-        ease: [0.22, 1, 0.36, 1],
-      }}
+      whileInView={reduceMotion ? undefined : { opacity: 1, x: 0 }}
+      initial={reduceMotion ? false : { opacity: 0, x: -20 }}
+      viewport={
+        reduceMotion ? undefined : { once: true, margin: "-60px", amount: 0 }
+      }
+      transition={
+        reduceMotion
+          ? undefined
+          : {
+              duration: 0.45,
+              ease: [0.22, 1, 0.36, 1],
+            }
+      }
     >
       <div className="relative flex flex-col items-center shrink-0">
         {!isLast && (

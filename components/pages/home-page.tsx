@@ -16,13 +16,18 @@ import Link from "next/link";
 
 export default function HomePage() {
   return (
-    <main className="min-h-screen flex flex-col">
+    <main id="main-content" className="min-h-screen flex flex-col">
       <DotsBackground />
       <MenuBar />
       <div className="flex-1 flex justify-center items-center">
         <div className="text-stone-900 text-center">
-          <p className="text-9xl font-light">
-            Hey <PiHandWaving size={84} className="wave inline align-middle" />{" "}
+          <h1 className="text-5xl md:text-9xl font-light">
+            Hey{" "}
+            <PiHandWaving
+              size={84}
+              className="wave inline align-middle"
+              aria-hidden="true"
+            />{" "}
             I'm{" "}
             <motion.strong
               className="text-sky-900 font-bold"
@@ -31,12 +36,26 @@ export default function HomePage() {
             >
               Jules Goy
             </motion.strong>
-          </p>
-          <p className="text-5xl text-stone-700">
+          </h1>
+          <p className="text-2xl md:text-5xl text-stone-700">
             Turning croissants{" "}
-            <LuCroissant size={28} className="inline align-middle" /> and coffee{" "}
-            <LuCoffee size={28} className="inline align-middle" /> into code{" "}
-            <LuCodeXml size={28} className="inline align-middle" />
+            <LuCroissant
+              size={28}
+              className="inline align-middle"
+              aria-hidden="true"
+            />{" "}
+            and coffee{" "}
+            <LuCoffee
+              size={28}
+              className="inline align-middle"
+              aria-hidden="true"
+            />{" "}
+            into code{" "}
+            <LuCodeXml
+              size={28}
+              className="inline align-middle"
+              aria-hidden="true"
+            />
           </p>
           <p className="text-xl text-stone-600">
             Junior French developer passionate about gameplay programming and
