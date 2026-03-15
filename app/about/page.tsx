@@ -60,7 +60,7 @@ export default function AboutMe() {
               gameplay developer, or pursue further studies in game development
               to get there. The web is a solid foundation and a genuine skill
               I'm building, but game dev is where I want to take it. Outside of
-              code, I draw inspiration from cinema, music, and comics, not as
+              code, I draw inspiration from cinema, music, and comics, not only as
               hobbies separate from my work, but as lenses through which I think
               about what makes an experience feel cohesive and meaningful.
             </p>
