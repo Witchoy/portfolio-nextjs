@@ -36,8 +36,9 @@ export default function TimelineItem({
       }
     >
       <div className="relative flex flex-col items-center shrink-0">
+        <div className="size-2 rounded-full bg-sky-300 mt-2 shrink-0 z-10" />
         {!isLast && (
-          <div className="flex-1 w-px mt-2 bg-gradient-to-b from-slate-200 via-slate-100 to-transparent" />
+          <div className="flex-1 w-px mt-1 bg-gradient-to-b from-slate-200 via-slate-100 to-transparent" />
         )}
       </div>
 
