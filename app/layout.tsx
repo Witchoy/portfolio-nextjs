@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { Raleway } from "next/font/google";
 import { cn } from "@/lib/utils";
 import { TooltipProvider } from "@/components/ui/tooltip";
+import { Analytics } from "@vercel/analytics/next"
 
 const font = Raleway({
   subsets: ["latin"],
@@ -25,6 +26,7 @@ export default function RootLayout({
       <body className="bg-background">
         <TooltipProvider>{children}</TooltipProvider>
       </body>
+      <Analytics />
     </html>
   );
 }
