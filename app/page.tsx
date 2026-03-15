@@ -21,7 +21,7 @@ export default function Home() {
       <MenuBar />
       <div className="flex-1 flex justify-center items-center">
         <div className="text-stone-900 text-center">
-          <p className="text-8xl font-light">
+          <p className="text-9xl font-light">
             Hey <PiHandWaving size={84} className="wave inline align-middle" />{" "}
             I'm{" "}
             <motion.strong
@@ -32,13 +32,13 @@ export default function Home() {
               Jules Goy
             </motion.strong>
           </p>
-          <p className="text-2xl text-stone-700">
+          <p className="text-5xl text-stone-700">
             Turning croissants{" "}
             <LuCroissant size={28} className="inline align-middle" /> and coffee{" "}
             <LuCoffee size={28} className="inline align-middle" /> into code{" "}
             <LuCodeXml size={28} className="inline align-middle" />
           </p>
-          <p className="text-lg text-stone-600">
+          <p className="text-xl text-stone-600">
             Junior French developer passionate about gameplay programming and
             creating clean code.
           </p>
