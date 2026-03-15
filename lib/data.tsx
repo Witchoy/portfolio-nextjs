@@ -200,7 +200,7 @@ export const projectsData: Project[] = [
       { label: "GitHub", url: "https://github.com/Witchoy/portfolio-nextjs" },
     ],
     image:
-      "https://raw.githubusercontent.com/Witchoy/portfolio-nextjs/b519e022a2bc4fa3d75741ff37cbc2aaafb7e465/public/home.png",
+      "https://github.com/Witchoy/portfolio-nextjs/blob/main/public/home.png?raw=true",
     featured: false,
     context: "Personal",
   },
