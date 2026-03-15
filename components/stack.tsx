@@ -4,26 +4,28 @@ import { Item, ItemContent, ItemMedia, ItemTitle } from "@/components/ui/item";
 export default function Stack() {
   const categories = ["Web", "Game Dev", "Tools"];
   return (
-    <section className="px-6 py-8">
-      <div className="max-w-4xl w-full mx-auto">
-        <h2 className="text-2xl font-semibold text-stone-900 mb-3">My Stack</h2>
-        <div className="flex flex-row flex-wrap gap-3 justify-center">
+    <section className="px-4 py-8 sm:px-6 sm:py-10">
+      <div className="mx-auto w-full max-w-4xl">
+        <h2 className="mb-4 text-xl font-semibold text-stone-900 sm:text-2xl">
+          My Stack
+        </h2>
+        <div className="space-y-5">
           {categories.map((cat) => (
             <div key={cat} className="w-full">
-              <p className="text-xs font-semibold text-stone-400 uppercase tracking-widest mb-2 mt-4">
+              <p className="mb-2 text-xs font-semibold uppercase tracking-widest text-stone-400">
                 {cat}
               </p>
-              <div className="flex flex-row flex-wrap gap-3">
+              <div className="flex flex-wrap gap-2 sm:gap-3">
                 {tech.stack
                   .filter((item) => item.category === cat)
                   .map((item) => (
                     <Item
                       key={item.name}
-                      className="w-fit border border-stone-200/70 bg-white/70 backdrop-blur-sm"
+                      className="w-fit border border-stone-200/70 bg-white/70 px-2.5 py-2 backdrop-blur-sm sm:px-3 sm:py-2.5"
                     >
                       <ItemMedia>
                         {item.icon ? (
-                          <item.icon size={24} className="text-stone-700" />
+                          <item.icon className="text-stone-700 text-base sm:text-lg" />
                         ) : (
                           <span
                             className="inline-block size-2 rounded-full bg-stone-400"
@@ -32,7 +34,7 @@ export default function Stack() {
                         )}
                       </ItemMedia>
                       <ItemContent>
-                        <ItemTitle className="text-lg text-stone-700">
+                        <ItemTitle className="text-sm text-stone-700 sm:text-base">
                           {item.name}
                         </ItemTitle>
                       </ItemContent>
@@ -42,7 +44,7 @@ export default function Stack() {
             </div>
           ))}
         </div>
-        <p className="mt-4 max-w-4xl text-lg text-stone-700 leading-relaxed">
+        <p className="mt-5 max-w-4xl text-base text-stone-700 leading-relaxed sm:text-lg">
           {tech.description}
         </p>
       </div>

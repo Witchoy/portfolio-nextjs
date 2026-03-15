@@ -19,9 +19,9 @@ export default function Timeline({ title, items }: TimelineProps) {
   const reduceMotion = useReducedMotion();
 
   return (
-    <section className="w-full max-w-2xl mx-auto px-4 py-12">
+    <section className="w-full max-w-4xl mx-auto px-4 py-10 sm:px-6 sm:py-12">
       <motion.header
-        className="mb-10"
+        className="mb-8 sm:mb-10"
         initial={reduceMotion ? false : { opacity: 0, y: -14 }}
         animate={reduceMotion ? undefined : { opacity: 1, y: 0 }}
         transition={
@@ -31,15 +31,15 @@ export default function Timeline({ title, items }: TimelineProps) {
         }
       >
         <div className="flex items-center gap-3 mb-1.5">
-          <h2 className="text-xl font-bold tracking-tight text-slate-800">
+          <h2 className="text-lg font-bold tracking-tight text-slate-800 sm:text-xl">
             {title}
           </h2>
         </div>
 
-        <div className="mt-6 ml-11 h-px bg-gradient-to-r from-sky-200 via-slate-200 to-transparent" />
+        <div className="mt-4 h-px bg-gradient-to-r from-sky-200 via-slate-200 to-transparent sm:mt-6 sm:ml-11" />
       </motion.header>
 
-      <ol>
+      <ol className="space-y-1 sm:space-y-0">
         {items.map((item, index) => (
           <TimelineItem
             key={index}

@@ -15,37 +15,40 @@ export default function MenuBar() {
 
   return (
     <header className="m-3">
-      <nav
-        aria-label="Primary"
-        className="flex justify-between bg-taupe-900 rounded-lg p-3"
-      >
-        <div>
-          <Button
-            variant={pathname === "/" ? "sky" : "ghost_sky"}
-            className="p-3"
-            asChild
-          >
-            <Link href="/" aria-label="Go to homepage">
-              <span className="text-white text-xl">julesgoy.dev</span>
-            </Link>
-          </Button>
-        </div>
-        <div>
-          {menuBar.map((item) => (
+      <nav aria-label="Primary" className="rounded-lg bg-taupe-900 p-3">
+        <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
+          <div className="flex justify-center sm:justify-start">
             <Button
-              key={item.name}
-              variant={isActive(item.url) ? "sky" : "ghost_sky"}
-              className="p-3"
+              variant={pathname === "/" ? "sky" : "ghost_sky"}
+              className="p-2 sm:p-3"
               asChild
             >
-              <Link
-                href={item.url}
-                aria-current={isActive(item.url) ? "page" : undefined}
-              >
-                <span className="text-white text-xl">{item.name}</span>
+              <Link href="/" aria-label="Go to homepage">
+                <span className="text-base text-white sm:text-xl">
+                  julesgoy.dev
+                </span>
               </Link>
             </Button>
-          ))}
+          </div>
+          <div className="flex flex-wrap items-center justify-center gap-2 sm:justify-end">
+            {menuBar.map((item) => (
+              <Button
+                key={item.name}
+                variant={isActive(item.url) ? "sky" : "ghost_sky"}
+                className="p-2 sm:p-3"
+                asChild
+              >
+                <Link
+                  href={item.url}
+                  aria-current={isActive(item.url) ? "page" : undefined}
+                >
+                  <span className="text-sm text-white sm:text-lg md:text-xl">
+                    {item.name}
+                  </span>
+                </Link>
+              </Button>
+            ))}
+          </div>
         </div>
       </nav>
     </header>
