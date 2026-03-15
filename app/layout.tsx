@@ -13,8 +13,25 @@ const font = Raleway({
 });
 
 export const metadata: Metadata = {
-  title: "Jules Goy",
-  description: "Junior Software Developer",
+  title: {
+    template: "%s | Jules Goy",
+    default: "Jules Goy",
+  },
+  description:
+    "Portfolio of Jules Goy, junior software developer focused on web and gameplay programming.",
+  metadataBase: new URL("https://julesgoy.dev"),
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    type: "website",
+    locale: "en_UK",
+    siteName: "Jules Goy",
+    title: "Jules' Portfolio",
+    url: new URL("https://julesgoy.dev"),
+    description:
+      "Portfolio of Jules Goy, junior software developer focused on web and gameplay programming.",
+  },
 };
 
 export default function RootLayout({

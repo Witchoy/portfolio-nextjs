@@ -30,7 +30,7 @@ export default function Stack() {
             </Item>
           ))}
         </div>
-        <p className="mt-4 max-w-3xl text-base text-stone-700 leading-relaxed">
+        <p className="mt-4 max-w-3xl text-lg text-stone-700 leading-relaxed">
           {tech.description}
         </p>
       </div>

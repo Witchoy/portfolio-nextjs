@@ -1,6 +1,12 @@
+import type { Metadata } from "next";
 import { DotsBackground } from "@/components/dots-bg";
 import Footer from "@/components/footer";
 import MenuBar from "@/components/menu-bar";
+
+export const metadata: Metadata = {
+  title: "Projects",
+  description: "My projects and experiments.",
+};
 
 export default function Projects() {
   return (
