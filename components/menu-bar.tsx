@@ -2,9 +2,8 @@
 
 import { Button } from "@/components/ui/button";
 import { menuBar } from "@/lib/data";
+import Link from "next/link";
 import { usePathname } from "next/navigation";
-
-const BASE_URL = process.env.BASE_URL;
 
 export default function MenuBar() {
   const pathname = usePathname();
@@ -20,10 +19,11 @@ export default function MenuBar() {
         <Button
           variant={pathname === "/" ? "sky" : "ghost_sky"}
           className="p-3"
+          asChild
         >
-          <a href={BASE_URL} className="text-2xl text-white">
+          <Link href="/" className="text-2xl text-white">
             julesgoy.dev
-          </a>
+          </Link>
         </Button>
       </div>
       <div>
@@ -34,9 +34,9 @@ export default function MenuBar() {
             className="p-3"
             asChild
           >
-            <a href={item.url}>
+            <Link href={item.url}>
               <span className="text-xl text-white">{item.name}</span>
-            </a>
+            </Link>
           </Button>
         ))}
       </div>

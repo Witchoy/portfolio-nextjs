@@ -43,10 +43,7 @@ export default function AboutMe() {
         </div>
       </div>
       <div className="px-6 py-12">
-        <Timeline
-          title="My Journey"
-          items={timelineData}
-        />
+        <Timeline title="My Journey" items={timelineData} />
       </div>
       <Footer />
     </main>

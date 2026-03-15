@@ -12,8 +12,7 @@ import SocialLinks from "@/components/social-links";
 import MenuBar from "@/components/menu-bar";
 import { Button } from "@/components/ui/button";
 import { DotsBackground } from "@/components/dots-bg";
-
-const BASE_URL = process.env.BASE_URL;
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -43,13 +42,13 @@ export default function Home() {
             Junior French developer passionate about gameplay programming and
             creating clean code.
           </p>
-          <Button variant="taupe_sky" className="my-6">
-            <a href={BASE_URL + "projects"}>
+          <Button variant="taupe_sky" className="my-6" asChild>
+            <Link href="/projects">
               <span className="inline-flex items-center gap-2">
                 View my projects
                 <LuArrowBigRightDash />
               </span>
-            </a>
+            </Link>
           </Button>
         </div>
       </div>

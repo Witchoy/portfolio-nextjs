@@ -10,8 +10,6 @@ import {
   TbBrandUnity,
 } from "react-icons/tb";
 
-const BASE_URL = process.env.BASE_URL;
-
 const techStack = [
   {
     name: "Nextjs",
@@ -72,11 +70,11 @@ export const socialLinks = [
 export const menuBar = [
   {
     name: "About Me",
-    url: BASE_URL + "about",
+    url: "/about",
   },
   {
     name: "Projects",
-    url: BASE_URL + "projects",
+    url: "/projects",
   },
 ];
 
@@ -96,17 +94,18 @@ export const timelineData = [
     title: "Internship - Pouey International",
     content: (
       <p>
-        Java intership working on the company CRM with Java servlets and XML. 
+        Java intership working on the company CRM with Java servlets and XML.
       </p>
-    )
+    ),
   },
   {
     date: "2023-2026",
     title: "BUT Informatique - Iut Robert Schuman, Strasbourg",
     content: (
       <p>
-        University program focused on learning development (C, C#, C++, Java, React, 
-        React-Native, Android Studio), testing, and collaborative project work.
+        University program focused on learning development (C, C#, C++, Java,
+        React, React-Native, Android Studio), testing, and collaborative project
+        work.
       </p>
     ),
   },
