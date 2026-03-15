@@ -4,6 +4,7 @@ import { Raleway } from "next/font/google";
 import { cn } from "@/lib/utils";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { Analytics } from "@vercel/analytics/next"
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 const font = Raleway({
   subsets: ["latin"],
@@ -27,6 +28,7 @@ export default function RootLayout({
         <TooltipProvider>{children}</TooltipProvider>
       </body>
       <Analytics />
+      <SpeedInsights />
     </html>
   );
 }
