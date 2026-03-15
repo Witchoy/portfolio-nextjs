@@ -21,8 +21,8 @@ export default function MenuBar() {
           className="p-3"
           asChild
         >
-          <Link href="/" className="text-2xl text-white">
-            julesgoy.dev
+          <Link href="/">
+            <span className="text-white text-xl">julesgoy.dev</span>
           </Link>
         </Button>
       </div>
@@ -35,7 +35,7 @@ export default function MenuBar() {
             asChild
           >
             <Link href={item.url}>
-              <span className="text-xl text-white">{item.name}</span>
+              <span className="text-white text-xl">{item.name}</span>
             </Link>
           </Button>
         ))}
