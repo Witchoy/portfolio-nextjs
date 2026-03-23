@@ -6,7 +6,7 @@ Personal portfolio website built with Next.js to present my profile, background,
 
 - `/` - Home
 - `/about` - About me + timeline
-- `/projects` - Projects showcase (work in progress)
+- `/projects` - Projects showcase
 
 ## Tech Stack
 
@@ -22,18 +22,26 @@ Personal portfolio website built with Next.js to present my profile, background,
 
 ```text
 app/
-	page.tsx
 	about/page.tsx
 	projects/page.tsx
 	layout.tsx
+	page.tsx
 components/
-	menu-bar.tsx
-	footer.tsx
-	social-links.tsx
-	dots-bg.tsx
+	pages/home-page.tsx
 	timeline/
+		timeline-items.tsx
+		timeline.tsx
+	ui/
+	dots-bg.tsx
+	footer.tsx
+	menu-bar.tsx
+	project-card.tsx
+	social-links.tsx
+	stack.tsx
 lib/
 	data.tsx
+	types.tsx
+	utils.ts
 ```
 
 ## Content Source
