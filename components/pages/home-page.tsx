@@ -20,7 +20,7 @@ export default function HomePage() {
 
   return (
     <main id="main-content" className="min-h-screen flex flex-col">
-      <DotsBackground />
+      {/* <DotsBackground /> */}
       <MenuBar />
       <div className="flex-1 flex items-center justify-center px-4 py-10 sm:px-6 sm:py-12">
         <div className="max-w-5xl text-stone-900 text-center">

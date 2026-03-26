@@ -28,7 +28,7 @@ export default async function AboutMe() {
 
   return (
     <main id="main-content" className="flex flex-col">
-      <DotsBackground />
+      {/* <DotsBackground /> */}
       <MenuBar />
       <div className="flex-1 px-4 py-8 sm:px-6 sm:py-12">
         <div className="mx-auto w-full max-w-4xl">

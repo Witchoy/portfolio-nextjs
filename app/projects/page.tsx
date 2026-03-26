@@ -38,7 +38,7 @@ export default async function Projects() {
 
   return (
     <main id="main-content" className="min-h-screen flex flex-col">
-      <DotsBackground />
+      {/* <DotsBackground /> */}
       <MenuBar />
       <div className="flex-1 px-4 py-10 sm:px-6 max-w-5xl mx-auto w-full">
         <h1 className="text-4xl font-bold text-stone-900 mb-10">
