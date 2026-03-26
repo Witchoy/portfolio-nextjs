@@ -27,7 +27,7 @@
     "ariaPrimary": "Principal",
     "homeAria": "Aller à la page d'accueil",
     "homeLabel": "julesgoy.dev",
-    "switchLanguageButton": "Passer en {locale}",
+    "switchLanguageButton": "🇫🇷",
     "switchLanguageAria": "Changer la langue vers {locale}",
     "localeShort": {
       "en": "EN",
