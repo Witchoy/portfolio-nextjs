@@ -142,6 +142,17 @@
           "apiRepo": "Repo API"
         }
       },
+      "floppybird": {
+        "title": "Floppy Bird",
+        "description": "FloppyBird est un clone de Flappy Bird développé avec Unity 6. Le jeu reprend fidèlement le principe original, cliquez pour faire battre les ailes de l'oiseau et éviter les tuyaux. Écrit en C#, il utilise des sprites issus de The Spriters Resource et se présente sous la forme d'un exécutable Windows prêt à lancer. Un projet d'apprentissage simple et efficace autour du développement de jeux avec Unity",
+        "tags": {
+          "unity": "Unity",
+          "csharp": "C#"
+        },
+        "links": {
+          "github": "GitHub"
+        }
+      },
       "torrington": {
         "title": "Torrington",
         "description": "Un serious game simulant la sélection d'un programme universitaire, développé en C# avec le moteur Godot. Construit avec une architecture MVC et le patron Observer, il intègre une base de données SQLite et fonctionne sur Windows, Linux et macOS. Un projet d'équipe qui m'a poussé à appliquer des principes de conception logicielle dans un contexte de jeu vidéo pour la première fois.",

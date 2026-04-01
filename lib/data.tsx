@@ -15,6 +15,7 @@ import {
   TbDatabase,
 } from "react-icons/tb";
 import { SiGodotengine } from "react-icons/si";
+import { features } from "node:process";
 
 const techStack = [
   { nameKey: "Stack.items.nextjs", icon: TbBrandNextjs, category: "web" },
@@ -144,6 +145,24 @@ export const projectsData = [
       "https://github.com/Witchoy/StrasTaRoute_Web/blob/prod/assets/Auth_Login.png?raw=true",
     featured: true,
     contextKey: "ProjectsData.context.iut",
+  },
+  {
+    titleKey: "ProjectsData.items.floppybird.title",
+    descriptionKey: "ProjectsData.items.floppybird.description",
+    tags: [
+      { labelKey: "ProjectsData.items.floppybird.tags.unity" },
+      { labelKey: "ProjectsData.items.floppybird.tags.csharp" },
+    ],
+    links: [
+      {
+        labelKey: "ProjectsData.items.floppybird.links.github",
+        url: "https://github.com/Witchoy/FloppyBird",
+      },
+    ],
+    image:
+      "https://github.com/Witchoy/FloppyBird/blob/main/GithubAssets/TitleScreen.png?raw=true",
+    featured: false,
+    contextKey: "ProjectsData.context.personal",
   },
   {
     titleKey: "ProjectsData.items.torrington.title",
