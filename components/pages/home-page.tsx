@@ -1,5 +1,6 @@
 "use client";
 
+import React from "react";
 import {
   LuArrowBigRightDash,
   LuCoffee,
@@ -14,8 +15,7 @@ import { Button } from "@/components/ui/button";
 import { DotsBackground } from "@/components/dots-bg";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
-
-export default function HomePage() {
+export default function HomePage({ projectShowcase }: { projectShowcase: React.ReactNode }) {
   const t = useTranslations("HomePage");
 
   return (
@@ -69,9 +69,10 @@ export default function HomePage() {
           </Button>
         </div>
       </div>
-      <div className="mb-3 flex justify-center px-2 sm:px-0">
-        <SocialLinks />
+      <div>
+        {projectShowcase}
       </div>
+      <SocialLinks />
     </main>
   );
 }

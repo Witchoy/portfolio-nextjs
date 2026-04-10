@@ -16,4 +16,5 @@ export type Project = {
   image?: string;
   featured?: boolean;
   context: string;
+  toShowcase?: boolean;
 };

@@ -11,7 +11,7 @@ export default async function ProjectCard({ project }: ProjectCardProps) {
 
   if (project.featured) {
     return (
-      <div className="col-span-full rounded-2xl border border-stone-200/70 bg-white/70 backdrop-blur-sm overflow-hidden flex flex-col md:flex-row gap-0">
+      <div className="rounded-2xl border border-stone-200/70 bg-white/70 backdrop-blur-sm overflow-hidden flex flex-col md:flex-row">
         {/* Image zone */}
         <div className="md:w-1/2 bg-stone-100 min-h-48 flex items-center justify-center overflow-hidden">
           {project.image ? (

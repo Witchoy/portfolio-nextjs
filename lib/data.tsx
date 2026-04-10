@@ -145,6 +145,7 @@ export const projectsData = [
       "https://github.com/Witchoy/StrasTaRoute_Web/blob/prod/assets/Auth_Login.png?raw=true",
     featured: true,
     contextKey: "ProjectsData.context.iut",
+    toShowcase: true,
   },
   {
     titleKey: "ProjectsData.items.floppybird.title",
@@ -163,6 +164,7 @@ export const projectsData = [
       "https://github.com/Witchoy/FloppyBird/blob/main/GithubAssets/TitleScreen.png?raw=true",
     featured: false,
     contextKey: "ProjectsData.context.personal",
+    toShowcase: true,
   },
   {
     titleKey: "ProjectsData.items.torrington.title",
@@ -223,6 +225,7 @@ export const projectsData = [
     image: undefined,
     featured: false,
     contextKey: "ProjectsData.context.personal",
+    toShowcase: true,
   },
   {
     titleKey: "ProjectsData.items.portfolio.title",
@@ -243,6 +246,7 @@ export const projectsData = [
       "https://github.com/Witchoy/portfolio-nextjs/blob/main/public/home.png?raw=true",
     featured: false,
     contextKey: "ProjectsData.context.personal",
+    toShowcase: true,
   },
 ];
 

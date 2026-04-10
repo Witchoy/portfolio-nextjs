@@ -10,7 +10,7 @@ export default function SocialLinks() {
   return (
     <nav
       aria-label={t("SocialLinks.ariaLabel")}
-      className="m-3 flex flex-wrap items-center justify-center gap-2 rounded-lg bg-taupe-900 p-3"
+      className="fixed bottom-3 left-1/2 -translate-x-1/2 z-[99] flex flex-wrap items-center justify-center gap-2 rounded-lg bg-taupe-900 p-3"
     >
       {socialLinks.map((item) => (
         <Button
