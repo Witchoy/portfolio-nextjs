@@ -96,6 +96,10 @@ export const menuBar = [
     nameKey: "MenuBar.items.projects",
     url: "/projects",
   },
+  {
+    nameKey: "MenuBar.items.games",
+    url: "/games",
+  }
 ];
 
 export const timelineData = [

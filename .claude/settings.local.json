@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python -m json.tool)",
+      "Bash(python -c ' *)",
+      "Bash(python -c \"import json; d=json.load\\(open\\('messages/en.json'\\)\\); print\\(json.dumps\\(d, indent=2\\)\\)\")"
+    ]
+  }
+}

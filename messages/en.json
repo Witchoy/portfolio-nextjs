@@ -21,6 +21,10 @@
     "about": {
       "title": "About",
       "description": "Learn more about me and my journey."
+    },
+    "games": {
+      "title": "Games",
+      "description": "Play FloppyBird, a Flappy Bird clone built with Unity."
     }
   },
   "MenuBar": {
@@ -35,7 +39,8 @@
     },
     "items": {
       "aboutMe": "About Me",
-      "projects": "Projects"
+      "projects": "Projects",
+      "games": "My Games"
     }
   },
   "HomePage": {
@@ -111,6 +116,13 @@
         "title": "BUT Informatique - IUT Robert Schuman, Strasbourg",
         "content": "Three-year university programme covering software development (C, C++, C#, Java, React, React Native, Android Studio), testing, and collaborative project work. It's here that I discovered Unity and C#, which sparked my interest in game development and shaped the direction I want to take professionally."
       }
+    }
+  },
+  "GamesPage": {
+    "heading": "Games",
+    "floppyBird": {
+      "title": "FloppyBird",
+      "description": "A Flappy Bird clone built with Unity 6 and C#. One button: flap and dodge."
     }
   },
   "ProjectsPage": {
