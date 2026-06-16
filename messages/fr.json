@@ -218,6 +218,18 @@
         "links": {
           "github": "GitHub"
         }
+      },
+      "beforeOpeningTime": {
+        "title": "Before Opening Time",
+        "description": "Un escape room à la première personne développé avec Unity 6. Dans la peau d'un tavernier, vous devez fouiller la pièce, trouver des objets et résoudre un cadenas à combinaison pour vous échapper avant l'ouverture. Publié sur itch.io avec un exécutable Windows prêt à lancer.",
+        "tags": {
+          "unity": "Unity",
+          "csharp": "C#"
+        },
+        "links": {
+          "github": "GitHub",
+          "itch": "itch.io"
+        }
       }
     }
   }

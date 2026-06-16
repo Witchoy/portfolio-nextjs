@@ -121,6 +121,29 @@ export const timelineData = [
 ];
 
 export const projectsData = [
+    {
+    titleKey: "ProjectsData.items.beforeOpeningTime.title",
+    descriptionKey: "ProjectsData.items.beforeOpeningTime.description",
+    tags: [
+      { labelKey: "ProjectsData.items.beforeOpeningTime.tags.unity" },
+      { labelKey: "ProjectsData.items.beforeOpeningTime.tags.csharp" },
+    ],
+    links: [
+      {
+        labelKey: "ProjectsData.items.beforeOpeningTime.links.github",
+        url: "https://github.com/Witchoy/BeforeOpeningTime",
+      },
+      {
+        labelKey: "ProjectsData.items.beforeOpeningTime.links.itch",
+        url: "https://witchoy.itch.io/before-opening-time",
+      },
+    ],
+    image:
+      "https://github.com/Witchoy/BeforeOpeningTime/blob/main/img/title_screen.png?raw=true",
+    featured: true,
+    contextKey: "ProjectsData.context.personal",
+    toShowcase: true,
+  },
   {
     titleKey: "ProjectsData.items.strasTaRoute.title",
     descriptionKey: "ProjectsData.items.strasTaRoute.description",
@@ -147,7 +170,7 @@ export const projectsData = [
     ],
     image:
       "https://github.com/Witchoy/StrasTaRoute_Web/blob/prod/assets/Auth_Login.png?raw=true",
-    featured: true,
+    featured: false,
     contextKey: "ProjectsData.context.iut",
     toShowcase: true,
   },

@@ -218,6 +218,18 @@
         "links": {
           "github": "GitHub"
         }
+      },
+      "beforeOpeningTime": {
+        "title": "Before Opening Time",
+        "description": "A first-person escape room game built with Unity 6. Playing as an innkeeper, you must search the room, find items, and solve a combination padlock to escape before opening time. Released on itch.io with a ready-to-run Windows build.",
+        "tags": {
+          "unity": "Unity",
+          "csharp": "C#"
+        },
+        "links": {
+          "github": "GitHub",
+          "itch": "itch.io"
+        }
       }
     }
   }
