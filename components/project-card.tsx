@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Project } from "@/lib/types";
 import { getTranslations } from "next-intl/server";
@@ -13,12 +14,15 @@ export default async function ProjectCard({ project }: ProjectCardProps) {
     return (
       <div className="rounded-2xl border border-stone-200/70 bg-white/70 backdrop-blur-sm overflow-hidden flex flex-col md:flex-row">
         {/* Image zone */}
-        <div className="md:w-1/2 bg-stone-100 min-h-48 flex items-center justify-center overflow-hidden">
+        <div className="md:w-1/2 bg-stone-100 min-h-48 relative flex items-center justify-center overflow-hidden">
           {project.image ? (
-            <img
+            <Image
               src={project.image}
               alt={project.title}
-              className="w-full h-full object-cover"
+              fill
+              sizes="(max-width: 768px) 100vw, 50vw"
+              className="object-cover"
+              priority
             />
           ) : (
             <span className="text-stone-400 text-sm">
@@ -68,12 +72,14 @@ export default async function ProjectCard({ project }: ProjectCardProps) {
   return (
     <div className="rounded-2xl border border-stone-200/70 bg-white/70 backdrop-blur-sm overflow-hidden flex flex-col">
       {/* Image zone */}
-      <div className="bg-stone-100 h-40 flex items-center justify-center overflow-hidden">
+      <div className="bg-stone-100 h-40 relative flex items-center justify-center overflow-hidden">
         {project.image ? (
-          <img
+          <Image
             src={project.image}
             alt={project.title}
-            className="w-full h-full object-cover"
+            fill
+            sizes="(max-width: 768px) 100vw, 50vw"
+            className="object-cover"
           />
         ) : (
           <span className="text-stone-400 text-sm">
